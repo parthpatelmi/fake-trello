@@ -1,0 +1,15 @@
+.wrapper{
+    //height: 85vh;
+    width: 300px;
+    background: aliceblue;
+    margin: 0 10px;
+}
+
+.todo-card{
+    background: navajowhite;
+    padding: 10px;
+    .todo-title{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+}
