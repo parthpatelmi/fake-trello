@@ -2,12 +2,17 @@ import React, {useState} from 'react'
 
 const AddTodo = () => {
 
+
+    const [data, setData] = useState({
+        title: "",
+    });
     const [value, setValue] = useState("")
     const [open, setOpen] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setOpen(false);
+        setData(...data, {title: value})
         console.log(value)
         setValue("")
     }
@@ -29,7 +34,7 @@ const AddTodo = () => {
                            onChange={(e) => setValue(e.target.value)}/>
                     <div className="d-flex align-items-center justify-content-between">
                         <button type="submit" className="btn btn-success">Add todo</button>
-                    <button onClick={handleToggle} className="btn btn-outline-danger">Cancel</button>
+                        <button onClick={handleToggle} className="btn btn-outline-danger">Cancel</button>
                     </div>
                 </form>
             </>
